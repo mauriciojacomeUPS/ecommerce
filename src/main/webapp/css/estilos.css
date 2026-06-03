@@ -1,0 +1,191 @@
+@charset "UTF-8";
+
+/* --- 1. ESTILOS BASE --- */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+}
+
+header {
+    background-color: #333;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.logo-header {
+    max-width: 250px;
+    height: auto;
+}
+
+.slogan {
+    color: #fff;
+    font-size: 0.85rem;
+}
+
+/* --- 2. NAVEGACIÓN --- */
+nav a {
+    text-decoration: none;
+    color: #444;
+    transition: 0.3s;
+    padding: 12px 20px;
+    display: inline-block;
+    font-size: 18px;
+}
+
+nav a:hover, nav a.active {
+    color: #000 !important;
+    font-weight: bold !important;
+    border-bottom: 3px solid #ff4500 !important;
+}
+
+/* --- 3. LOGIN Y REGISTRO --- */
+.card-login, .card-register {
+    border: none !important;
+    border-radius: 15px !important;
+    overflow: hidden;
+}
+
+.card-header-fit, .bg-fit-dark {
+    background-color: #1a1a1a !important;
+    color: white !important;
+    padding: 1.5rem;
+}
+
+.btn-fit-primary, .btn-fit {
+    background-color: #ff4500 !important;
+    border: none !important;
+    color: white !important;
+    font-weight: bold !important;
+}
+
+/* --- 4. FICHA DE RESPUESTA (respuesta.jsp) --- */
+body.body-respuesta {
+    background-color: #c9d6c4 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container-confirmacion {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.tabla-datos {
+    background-color: white !important;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-datos td {
+    padding: 15px;
+    border: 1px solid #eee;
+    font-size: 0.95rem;
+}
+
+.etiqueta {
+    text-align: right;
+    font-weight: bold;
+    color: #333;
+    width: 50%;
+}
+
+.valor {
+    text-align: left;
+    color: #555;
+    width: 50%;
+}
+
+.color-box {
+    width: 50px;
+    height: 22px;
+    border-radius: 5px;
+    display: inline-block;
+    border: 1px solid #000;
+}
+
+/* --- 5. MASCOTA FLOTANTE Y DIÁLOGOS --- */
+.contenedor-mascota {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.bocadillo-chat {
+    display: none; /* Controlado por JS */
+    background: white;
+    border: 2px solid #ff4500;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 12px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    width: 100%;
+}
+
+.bocadillo-chat p {
+    margin: 0;
+    font-size: 13px;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+/* Triángulo del bocadillo */
+.bocadillo-chat::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: 25px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #ff4500;
+}
+
+.circulo-mascota {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #ff4500;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    animation: flotar 3s ease-in-out infinite;
+}
+
+/* Animación de flote para la mascota */
+@keyframes flotar {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* --- 6. OTROS --- */
+.btn-dev {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-decoration: none !important;
+    color: #333;
+}
+
+footer {
+    background-color: #222;
+    padding: 2.5rem 0;
+    color: white;
+}
